@@ -1,4 +1,4 @@
-# Automata Protocol V6
+# Automata Protocol
 ## Decentralized Notarization Architecture for Industrial Hardware Monitoring
 
 *MasterZ × IOTA Hackathon 2026 — Logical Documentation*
@@ -23,7 +23,7 @@ The result: **SLA disputes are expensive, slow, and inherently biased toward the
 
 ## The Solution
 
-**Automata Protocol V6** replaces centralized log management with a **decentralized, machine-to-machine notarization layer** built on the IOTA blockchain.
+**Automata Protocol** replaces centralized log management with a **decentralized, machine-to-machine notarization layer** built on the IOTA blockchain.
 
 Every state change of a monitored device is:
 1. **Detected** automatically by independent observer processes (oracles)
@@ -87,7 +87,7 @@ Physical / Simulated Devices
    Dashboard (Next.js — Real-time visualization)
 ```
 
-![Automata Protocol V6 Schema](Automata_Protocol_V6_Schema.png)
+![Automata Protocol Schema](Automata_Protocol_Schema.png)
 
 **Fundamental principle**: the JavaScript code of the oracles is exclusively a messenger — it receives signals from devices and translates them into blockchain transactions. The **Move contract** is the true brain of the system: it defines the rules, manages permissions, validates votes, and decides when a state is officially certified. The oracles simply follow what the contract enforces.
 
@@ -260,7 +260,7 @@ In traditional monitoring:
 
 Every step introduces the possibility of error, bias, or manipulation.
 
-In Automata Protocol V6:
+In Automata Protocol:
 - The device generates the signal
 - The oracle detects and validates it automatically
 - The Move contract certifies it cryptographically according to immutable rules
@@ -289,5 +289,5 @@ This is true **machine-to-machine trust** — the state of a physical device is 
 
 ---
 
-*Automata Protocol V6 — MasterZ × IOTA Hackathon 2026*
+*Automata Protocol — MasterZ × IOTA Hackathon 2026*
 *Last Updated: March 2026*
