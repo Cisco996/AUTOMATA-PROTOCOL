@@ -1,4 +1,4 @@
-# 📡 Automata Protocol V6 — SDK Edition
+# 📡 Automata Protocol — SDK Edition
 
 [![IOTA Rebased](https://img.shields.io/badge/Blockchain-IOTA%20Rebased-blue?style=for-the-badge&logo=iota)](https://iota.org)
 [![Next.js](https://img.shields.io/badge/Frontend-Next.js%2015-black?style=for-the-badge&logo=next.js)](https://nextjs.org)
@@ -10,11 +10,11 @@ A high-performance, decentralized monitoring and notarization system for **Optic
 
 ## 🚀 Project Overview
 
-This project implements a **granular parallelized Oracle network** (V6) designed to monitor 20 OLT devices via **SNMP V3 (AuthPriv)** and notarize their status changes (Operational, Alarm, Offline) directly onto the IOTA blockchain. 
+This project implements a **granular parallelized Oracle network** designed to monitor 20 OLT devices via **SNMP V3 (AuthPriv)** and notarize their status changes (Operational, Alarm, Offline) directly onto the IOTA blockchain. 
 
 By leveraging **Move Smart Contracts** and the **IOTA TS SDK**, the system achieves millisecond-latency signing and zero-conflict updates, ensuring each OLT is an independent asset on-chain.
 
-### Key Features (V6.1)
+### Key Features
 *   ⚡ **Real-time Notarization**: Millisecond transaction signing in-memory (Native SDK) with <50ms latency.
 *   🛡️ **Blockchain Reliability**: Leverages native IOTA metadata (`timestampMs`) to ensure every event is counted correctly, eliminating counter freezes (no more "stuck at 50" issues).
 *   🌐 **Distributed Oracle Grid**: 10 independent Oracle nodes with automated quorum validation.
@@ -93,4 +93,4 @@ If needed, you can manage the system manually using these commands:
 This is an **MVP (Minimum Viable Product)** designed for Testnet environments. **Never** commit your private keys to Git. Always use dedicated Testnet accounts and local environment variables.
 
 ---
-*Developed for the IOTA Ecosystem — 2026 (V6.1 — Automata Protocol)*
+*Developed for the IOTA Ecosystem — 2026 (Automata Protocol)*
