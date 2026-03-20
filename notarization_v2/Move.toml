@@ -1,0 +1,9 @@
+[package]
+name = "notarization_v2"
+edition = "2024"
+
+[dependencies]
+Iota = { git = "https://github.com/iotaledger/iota.git", subdir = "crates/iota-framework/packages/iota-framework", rev = "e694e2ee8f2f9f0b9b03b843a24ff0f7bcff2930" }
+
+[addresses]
+notarization_v2 = "0x0"
