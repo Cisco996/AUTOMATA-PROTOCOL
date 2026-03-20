@@ -1,4 +1,4 @@
-# 📡 Automata Protocol V6 — Technical Documentation (V2)
+# 📡 Automata Protocol — Technical Documentation (V2)
 
 ## Architecture: SDK-Native Parallel Notarization
 
@@ -8,7 +8,7 @@ This document provides a comprehensive technical overview of the OLT (Optical Li
 
 ## 1. System Philosophy
 
-The V6 architecture moves away from legacy sequential processing to a **granular parallelized model**. Every OLT is treated as an independent state machine on the blockchain, allowing simultaneous updates from different Oracles without gas contention or transaction sequencing bottlenecks.
+The architecture moves away from legacy sequential processing to a **granular parallelized model**. Every OLT is treated as an independent state machine on the blockchain, allowing simultaneous updates from different Oracles without gas contention or transaction sequencing bottlenecks.
 
 ### Core Objectives:
 *   **Decentralized Trust**: Multi-oracle consensus before any state change is confirmed.
@@ -37,7 +37,7 @@ The V6 architecture moves away from legacy sequential processing to a **granular
 The contract is designed with an **Object-Centric** approach that guarantees maximum parallelization and efficiency.
 
 **OLT Management (Independent Objects)**
-The V6 architecture uses a separate shared object for each OLT (`OltState`). This eliminates any object contention between different OLTs, allowing parallel transactions without blocking each other.
+The architecture uses a separate shared object for each OLT (`OltState`). This eliminates any object contention between different OLTs, allowing parallel transactions without blocking each other.
 
 ```move
 public struct OltState has key {
