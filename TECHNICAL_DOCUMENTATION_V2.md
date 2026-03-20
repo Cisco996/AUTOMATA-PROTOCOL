@@ -242,4 +242,5 @@ The "Oracle Network" dashboard uses specific color coding:
 
 ---
 
+*Automata Protocol — MasterZ × IOTA Hackathon 2026*
 *Last Updated: March 2026*
