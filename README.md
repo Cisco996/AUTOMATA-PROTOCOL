@@ -16,7 +16,7 @@ By leveraging **Move Smart Contracts** and the **IOTA TS SDK**, the system achie
 
 ### Key Features
 *   ⚡ **Real-time Notarization**: Millisecond transaction signing in-memory (Native SDK) with <50ms latency.
-*   🛡️ **Blockchain Reliability**: Leverages native IOTA metadata (`timestampMs`) to ensure every event is counted correctly, eliminating counter freezes (no more "stuck at 50" issues).
+*   🛡️ **Blockchain Reliability**: Leverages native IOTA metadata (`timestampMs`) to ensure every event is counted correctly, eliminating counter freezes.
 *   🌐 **Distributed Oracle Grid**: 10 independent Oracle nodes with automated quorum validation.
 *   📡 **SNMP V3 Integration**: Secure trap handling with SHA authentication and AES encryption.
 *   📊 **Cyber-Aesthetic Dashboard**: New color-coded KPIs for quick diagnostics: 🟢 Votes, 🔵 Blockchain Confirmations, 🟢 Confirmation Rate.
