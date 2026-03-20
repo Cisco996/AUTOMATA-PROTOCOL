@@ -1,5 +1,5 @@
 # Automata Protocol
-## Decentralized Notarization Architecture for Industrial Hardware Monitoring
+## Decentralized Notarization Architecture for Hardware Monitoring
 
 *MasterZ × IOTA Hackathon 2026 — Logical Documentation*
 
