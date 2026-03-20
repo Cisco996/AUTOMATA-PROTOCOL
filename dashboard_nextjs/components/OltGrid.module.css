@@ -1,0 +1,107 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 8px;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 10px 6px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 224, 84, 0.15);
+}
+
+.operational {
+    background: linear-gradient(135deg, rgba(0, 224, 84, 0.05), rgba(0, 224, 84, 0.2));
+    box-shadow: 0 0 12px rgba(0, 224, 84, 0.2);
+    border-color: rgba(0, 224, 84, 0.3) !important;
+}
+
+.alarm {
+    background: linear-gradient(135deg, rgba(255, 49, 49, 0.1), rgba(255, 49, 49, 0.25));
+    box-shadow: 0 0 12px rgba(255, 49, 49, 0.3);
+    border-color: rgba(255, 49, 49, 0.4) !important;
+    animation: pulseAlarm 2s infinite;
+}
+
+.offline {
+    background: linear-gradient(135deg, #111, #1f1f1f);
+    opacity: 0.7;
+}
+
+@keyframes pulseAlarm {
+
+    0%,
+    100% {
+        box-shadow: 0 0 12px rgba(255, 49, 49, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 24px rgba(255, 49, 49, 0.6);
+    }
+}
+
+.oltId {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 0.05em;
+}
+
+.alarm .oltId {
+    color: #ff3131;
+}
+
+.groupBadge {
+    font-size: 0.5rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 8px;
+    letter-spacing: 0.07em;
+}
+
+.grp1 {
+    background: linear-gradient(90deg, #0066cc, #00aaff);
+    color: white;
+}
+
+.grp2 {
+    background: linear-gradient(90deg, #008888, #00cccc);
+    color: white;
+}
+
+.emoji {
+    font-size: 1rem;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.statusLabel {
+    font-size: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.oracleLabel {
+    font-size: 0.48rem;
+    color: rgba(0, 255, 200, 0.6);
+}

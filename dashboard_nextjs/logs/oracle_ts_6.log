@@ -1,0 +1,74 @@
+[19:08:52] [Oracle-6] 📡 SNMP V3 Initialized at address: 0xa61ba5e4973d279ab5d79048542004a848468460dd675e6324742f556be42d84
+[19:08:52] [Oracle-6] --- ORACLE-6 STARTED (SNMP V3 MODE) ---
+[19:08:52] [Oracle-6] Listening for SNMP V3 AuthPriv Traps on port 5010
+[19:08:52] [Oracle-6] Health-check HTTP server listening on port 6006
+[19:08:58] [Oracle-6] >>> VOTE OLT 11 -> 1
+[19:09:00] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:00] [Oracle-6]     [OK] Notarized.
+[19:09:00] [Oracle-6] >>> VOTE OLT 12 -> 1
+[19:09:01] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:01] [Oracle-6]     [OK] Notarized.
+[19:09:01] [Oracle-6] >>> VOTE OLT 13 -> 1
+[19:09:02] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:02] [Oracle-6]     [OK] Notarized.
+[19:09:02] [Oracle-6] >>> VOTE OLT 14 -> 1
+[19:09:03] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:03] [Oracle-6]     [OK] Notarized.
+[19:09:03] [Oracle-6] >>> VOTE OLT 15 -> 1
+[19:09:04] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:04] [Oracle-6]     [OK] Notarized.
+[19:09:04] [Oracle-6] >>> VOTE OLT 16 -> 1
+[19:09:05] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:05] [Oracle-6]     [OK] Notarized.
+[19:09:05] [Oracle-6] >>> VOTE OLT 17 -> 1
+[19:09:06] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:09:06] [Oracle-6]     [OK] Notarized.
+[19:09:06] [Oracle-6] >>> VOTE OLT 18 -> 1
+[19:09:07] [Oracle-6]     [GAS] budget=4827200 | spent=1000000
+[19:09:07] [Oracle-6]     [INFO] Already registered.
+[19:09:07] [Oracle-6] >>> VOTE OLT 19 -> 1
+[19:09:08] [Oracle-6]     [GAS] budget=4827200 | spent=1000000
+[19:09:08] [Oracle-6]     [INFO] Already registered.
+[19:09:08] [Oracle-6] >>> VOTE OLT 20 -> 1
+[19:09:09] [Oracle-6]     [GAS] budget=4827200 | spent=1000000
+[19:09:09] [Oracle-6]     [INFO] Already registered.
+[19:10:12] [Oracle-6] TIMEOUT: OLT 11
+[19:10:12] [Oracle-6] >>> VOTE OLT 11 -> 0
+[19:10:12] [Oracle-6] TIMEOUT: OLT 12
+[19:10:12] [Oracle-6] TIMEOUT: OLT 13
+[19:10:12] [Oracle-6] TIMEOUT: OLT 14
+[19:10:12] [Oracle-6] TIMEOUT: OLT 15
+[19:10:12] [Oracle-6] TIMEOUT: OLT 16
+[19:10:12] [Oracle-6] TIMEOUT: OLT 17
+[19:10:12] [Oracle-6] TIMEOUT: OLT 18
+[19:10:12] [Oracle-6] TIMEOUT: OLT 19
+[19:10:12] [Oracle-6] TIMEOUT: OLT 20
+[19:10:13] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:13] [Oracle-6]     [OK] Notarized.
+[19:10:13] [Oracle-6] >>> VOTE OLT 12 -> 0
+[19:10:14] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:14] [Oracle-6]     [OK] Notarized.
+[19:10:14] [Oracle-6] >>> VOTE OLT 13 -> 0
+[19:10:15] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:15] [Oracle-6]     [OK] Notarized.
+[19:10:15] [Oracle-6] >>> VOTE OLT 14 -> 0
+[19:10:16] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:16] [Oracle-6]     [OK] Notarized.
+[19:10:17] [Oracle-6] >>> VOTE OLT 15 -> 0
+[19:10:18] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:18] [Oracle-6]     [OK] Notarized.
+[19:10:18] [Oracle-6] >>> VOTE OLT 16 -> 0
+[19:10:19] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:19] [Oracle-6]     [OK] Notarized.
+[19:10:19] [Oracle-6] >>> VOTE OLT 17 -> 0
+[19:10:20] [Oracle-6]     [GAS] budget=4827200 | spent=2846800
+[19:10:20] [Oracle-6]     [OK] Notarized.
+[19:10:20] [Oracle-6] >>> VOTE OLT 18 -> 0
+[19:10:21] [Oracle-6]     [GAS] budget=4827200 | spent=1060800
+[19:10:21] [Oracle-6]     [OK] Notarized.
+[19:10:21] [Oracle-6] >>> VOTE OLT 19 -> 0
+[19:10:22] [Oracle-6]     [GAS] budget=4827200 | spent=1060800
+[19:10:22] [Oracle-6]     [OK] Notarized.
+[19:10:22] [Oracle-6] >>> VOTE OLT 20 -> 0
+[19:10:23] [Oracle-6]     [GAS] budget=4827200 | spent=1060800
+[19:10:23] [Oracle-6]     [OK] Notarized.

@@ -1,0 +1,295 @@
+.oraclePage {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* ── KPI Row ── */
+.kpiRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.kpiCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: 14px;
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+}
+
+.kpiCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 224, 84, 0.03) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.kpiCard:hover {
+    border-color: var(--border-accent);
+    box-shadow: 0 4px 24px rgba(0, 255, 200, 0.08);
+}
+
+.kpiLabel {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.kpiValue {
+    font-size: 2.4rem;
+    font-weight: 900;
+    letter-spacing: -0.03em;
+    font-family: 'Share Tech Mono', monospace;
+    text-shadow: 0 0 20px currentColor;
+    opacity: 0.9;
+}
+
+.kpiOf {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-left: 2px;
+}
+
+.kpiSub {
+    font-size: 0.66rem;
+    color: var(--text-secondary);
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 0.04em;
+    opacity: 0.7;
+}
+
+/* ── Mid Row ── */
+.midRow {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+/* ── Consensus bars ── */
+.consensusItem {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.consensusLabel {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.consensusCount {
+    color: var(--text-secondary);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.72rem;
+}
+
+.barTrack {
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+}
+
+.barFill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 0.6s ease;
+}
+
+/* ── Table header row ── */
+.tableHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -4px;
+}
+
+.checkedAt {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.68rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: var(--text-secondary);
+}
+
+.pulseDot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--cyber-green);
+    box-shadow: 0 0 6px var(--cyber-green);
+    animation: pulseDotAnim 1.5s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulseDotAnim {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.7);
+    }
+}
+
+/* ── Table ── */
+.tableWrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.78rem;
+}
+
+.table thead th {
+    padding: 8px 12px;
+    text-align: left;
+    font-size: 0.64rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(0, 255, 200, 0.5);
+    border-bottom: 1px solid var(--border-subtle);
+    white-space: nowrap;
+}
+
+.table tbody td {
+    padding: 9px 12px;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(0, 255, 200, 0.04);
+    white-space: nowrap;
+}
+
+.tableRow:hover td {
+    background: rgba(0, 255, 200, 0.025);
+}
+
+/* ── Cell types ── */
+.oracleIdCell {
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.8rem;
+}
+
+.groupBadge {
+    font-weight: 800;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+}
+
+/* Process status badges */
+.statusActive {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #00e054;
+    text-shadow: 0 0 8px rgba(0, 224, 84, 0.5);
+    animation: activeGlow 2s infinite;
+}
+
+@keyframes activeGlow {
+
+    0%,
+    100% {
+        text-shadow: 0 0 8px rgba(0, 224, 84, 0.5);
+    }
+
+    50% {
+        text-shadow: 0 0 14px rgba(0, 224, 84, 0.9);
+    }
+}
+
+/* Gray for offline — consistent with other dashboards */
+.statusOffline {
+    font-size: 0.74rem;
+    font-weight: 600;
+    color: #4a6080;
+}
+
+.statusChecking {
+    font-size: 0.74rem;
+    color: rgba(140, 180, 210, 0.5);
+    font-style: italic;
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+/* Filter active banner */
+.filterBanner {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: rgba(0, 255, 200, 0.05);
+    border: 1px solid rgba(0, 255, 200, 0.15);
+    border-radius: 8px;
+    font-size: 0.78rem;
+    font-family: 'Share Tech Mono', monospace;
+    color: rgba(0, 255, 200, 0.7);
+    letter-spacing: 0.03em;
+}
+
+.numCell {
+    font-family: 'Share Tech Mono', monospace;
+    text-align: center;
+    color: var(--text-primary);
+}
+
+.addrCell {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: default;
+}
+
+/* ── Chart Legend ── */
+.chartLegend {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: 0.72rem;
+    color: var(--text-secondary);
+    margin-top: 4px;
+}
+
+.chartLegend span {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

@@ -1,0 +1,195 @@
+.mapContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+}
+
+/* Override Leaflet container styles for cyber theme */
+.leafletMap {
+    border: 1px solid var(--border-subtle) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4) !important;
+    overflow: hidden;
+    background: #010810 !important;
+}
+
+/* Fix Leaflet z-index inside our stacked layout */
+:global(.leaflet-container) {
+    background: #010810 !important;
+    font-family: 'Inter', sans-serif;
+    z-index: 1;
+}
+
+:global(.leaflet-control-zoom) {
+    border: 1px solid var(--border-accent) !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+    margin: 15px !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+:global(.leaflet-control-zoom-in),
+:global(.leaflet-control-zoom-out) {
+    background: rgba(4, 16, 32, 0.9) !important;
+    color: var(--cyber-green) !important;
+    border: none !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    font-size: 16px !important;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease !important;
+}
+
+:global(.leaflet-control-zoom-in:hover),
+:global(.leaflet-control-zoom-out:hover) {
+    background: var(--cyber-green-dim) !important;
+    color: #fff !important;
+}
+
+:global(.leaflet-control-attribution) {
+    background: rgba(0, 5, 15, 0.8) !important;
+    color: rgba(0, 255, 200, 0.3) !important;
+    font-size: 0.6rem !important;
+    border-radius: 8px 0 0 0 !important;
+    backdrop-filter: blur(4px);
+}
+
+:global(.leaflet-control-attribution a) {
+    color: var(--cyber-blue) !important;
+    opacity: 0.6;
+}
+
+/* Custom Marker Styles */
+.customMarker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.markerDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.pulseRing {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+    animation: markerPulse 2s infinite ease-out;
+}
+
+@keyframes markerPulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+        border: 2px solid currentColor;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+        border: 1px solid currentColor;
+    }
+}
+
+/* Custom tooltip */
+.leafletTooltip {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+:global(.leaflet-tooltip.leafletTooltip) {
+    background: #020b14 !important;
+    border: 1px solid var(--border-accent) !important;
+    border-radius: 12px !important;
+    padding: 0 !important;
+    color: var(--text-primary) !important;
+    font-size: 0.8rem !important;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), 0 0 10px rgba(0, 224, 84, 0.1) !important;
+    backdrop-filter: blur(16px);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+:global(.leaflet-tooltip-top::before) {
+    border-top-color: var(--border-accent) !important;
+}
+
+.tooltipContent {
+    line-height: 1.6;
+    min-width: 160px;
+    background: linear-gradient(180deg, rgba(4, 16, 32, 1) 0%, rgba(2, 10, 25, 1) 100%);
+}
+
+.tooltipHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 10px 14px 6px 14px;
+    background: rgba(0, 224, 84, 0.05);
+}
+
+.tooltipHeader strong {
+    color: var(--cyber-green);
+    font-size: 0.85rem;
+    text-shadow: 0 0 10px rgba(0, 224, 84, 0.3);
+}
+
+.tooltipCity {
+    color: var(--text-secondary);
+    font-size: 0.72rem;
+    font-family: 'Share Tech Mono', monospace;
+    letter-spacing: 0.05em;
+}
+
+.tooltipStatus {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 6px 14px 10px 14px;
+    letter-spacing: 0.03em;
+}
+
+/* Legend */
+.legend {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 12px;
+    background: rgba(4, 16, 32, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+}
+
+.legendItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}

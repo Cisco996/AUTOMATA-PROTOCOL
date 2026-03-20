@@ -1,0 +1,13 @@
+.wrapper {
+    background: rgba(0, 10, 20, 0.6);
+    border: 1px solid rgba(0, 224, 84, 0.12);
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.empty {
+    color: rgba(0, 224, 84, 0.5);
+    text-align: center;
+    padding: 40px;
+    font-style: italic;
+}

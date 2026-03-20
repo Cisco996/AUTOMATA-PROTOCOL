@@ -1,0 +1,536 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Share+Tech+Mono&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --cyber-green: #00e054;
+  --cyber-green-dim: rgba(0, 224, 84, 0.15);
+  --cyber-blue: #00aaff;
+  --cyber-red: #ff3131;
+  --bg-dark: #0a1525;
+  --bg-card: rgba(15, 30, 50, 0.85);
+  --text-primary: rgba(220, 240, 255, 0.95);
+  --text-secondary: rgba(140, 180, 210, 0.75);
+  --border-subtle: rgba(0, 255, 200, 0.1);
+  --border-accent: rgba(0, 255, 200, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Animated background gradient */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 10%, rgba(0, 80, 150, 0.25) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 80%, rgba(0, 60, 100, 0.2) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(0, 40, 80, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================
+   SCROLLBAR
+   ============================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 10, 20, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 200, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 200, 0.5);
+}
+
+/* ============================
+   LAYOUT
+   ============================ */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: rgba(10, 20, 35, 0.92);
+  border-right: 1px solid var(--border-subtle);
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  flex-shrink: 0;
+  backdrop-filter: blur(12px);
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px 28px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.page-title {
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  background: linear-gradient(90deg, var(--cyber-green), var(--cyber-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.05em;
+}
+
+/* ============================
+   SIDEBAR ITEMS
+   ============================ */
+.sidebar-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.sidebar-logo-title {
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: var(--cyber-green);
+  text-transform: uppercase;
+}
+
+.sidebar-logo-sub {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(0, 255, 200, 0.5);
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  width: 100%;
+  text-align: left;
+}
+
+.nav-btn:hover {
+  background: var(--cyber-green-dim);
+  color: var(--cyber-green);
+  border-color: var(--border-accent);
+}
+
+.nav-btn.active {
+  background: var(--cyber-green-dim);
+  color: var(--cyber-green);
+  border-color: var(--border-accent);
+  font-weight: 700;
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.1);
+}
+
+/* ============================
+   FORM CONTROLS (sidebar)
+   ============================ */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.form-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: rgba(0, 255, 200, 0.55);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-label::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--cyber-green);
+  box-shadow: 0 0 6px var(--cyber-green);
+  flex-shrink: 0;
+}
+
+/* Select */
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300e054' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 10px center,
+    rgba(0, 6, 18, 0.85);
+  border: 1px solid rgba(0, 255, 200, 0.18);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.82rem;
+  padding: 9px 32px 9px 12px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.03em;
+}
+
+.form-select:hover {
+  border-color: rgba(0, 255, 200, 0.35);
+  background-color: rgba(0, 255, 200, 0.04);
+  box-shadow: 0 0 0 1px rgba(0, 255, 200, 0.08) inset;
+}
+
+.form-select:focus {
+  border-color: var(--cyber-green);
+  box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.1), 0 0 12px rgba(0, 255, 200, 0.08);
+  background-color: rgba(0, 255, 200, 0.05);
+}
+
+.form-select option {
+  background: #030d1a;
+  color: var(--text-primary);
+}
+
+/* Date input */
+.form-input {
+  background: rgba(0, 6, 18, 0.85);
+  border: 1px solid rgba(0, 255, 200, 0.18);
+  border-radius: 8px;
+  color: var(--cyber-green);
+  font-size: 0.82rem;
+  padding: 9px 12px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  font-family: 'Share Tech Mono', monospace;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  /* Force the browser's native calendar to use its dark theme */
+  color-scheme: dark;
+}
+
+.form-input:hover {
+  border-color: rgba(0, 255, 200, 0.35);
+  background-color: rgba(0, 255, 200, 0.04);
+}
+
+.form-input:focus {
+  border-color: var(--cyber-green);
+  box-shadow: 0 0 0 3px rgba(0, 255, 200, 0.1), 0 0 12px rgba(0, 255, 200, 0.08);
+  background-color: rgba(0, 255, 200, 0.05);
+}
+
+/* Chrome date picker icon — tinted green */
+.form-input::-webkit-calendar-picker-indicator {
+  filter: invert(65%) sepia(90%) saturate(400%) hue-rotate(115deg) brightness(1.2);
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.form-input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  transform: scale(1.15);
+}
+
+/* Remove the inner date field spinner arrows */
+.form-input::-webkit-inner-spin-button {
+  display: none;
+}
+
+.toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.toggle-label {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ============================
+   METRICS CARDS
+   ============================ */
+.metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  backdrop-filter: blur(10px);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  border-color: var(--border-accent);
+  box-shadow: 0 4px 24px rgba(0, 255, 200, 0.08);
+}
+
+.metric-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.metric-value.green {
+  color: var(--cyber-green);
+  text-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+}
+
+.metric-value.red {
+  color: var(--cyber-red);
+  text-shadow: 0 0 20px rgba(255, 49, 49, 0.4);
+}
+
+.metric-value.gray {
+  color: var(--text-secondary);
+}
+
+.metric-sub {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+/* ============================
+   SECTION CARDS
+   ============================ */
+.section-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 16px;
+  padding: 20px 24px;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.section-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cyber-green);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--border-accent), transparent);
+}
+
+/* ============================
+   STATUS BADGE
+   ============================ */
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.status-pill.online {
+  background: var(--cyber-green-dim);
+  color: var(--cyber-green);
+  border: 1px solid var(--border-accent);
+}
+
+/* ============================
+   REFRESH INDICATOR
+   ============================ */
+.refresh-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cyber-green);
+  box-shadow: 0 0 6px var(--cyber-green);
+  animation: pulseDot 1.5s infinite;
+}
+
+@keyframes pulseDot {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.5;
+    transform: scale(0.7);
+  }
+}
+
+/* ============================
+   DIVIDER
+   ============================ */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+  margin: 4px 0;
+}
+
+/* ============================
+   TOGGLE SWITCH
+   ============================ */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 38px;
+  height: 22px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  inset: 0;
+  background: rgba(0, 20, 40, 0.8);
+  border: 1px solid var(--border-subtle);
+  border-radius: 22px;
+  transition: 0.2s;
+}
+
+.toggle-slider::before {
+  content: '';
+  position: absolute;
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background: var(--text-secondary);
+  border-radius: 50%;
+  transition: 0.2s;
+}
+
+.toggle-switch input:checked+.toggle-slider {
+  background: rgba(0, 255, 200, 0.2);
+  border-color: var(--cyber-green);
+}
+
+.toggle-switch input:checked+.toggle-slider::before {
+  transform: translateX(16px);
+  background: var(--cyber-green);
+  box-shadow: 0 0 6px var(--cyber-green);
+}

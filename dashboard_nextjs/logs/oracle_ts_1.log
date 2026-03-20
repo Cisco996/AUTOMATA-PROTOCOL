@@ -1,0 +1,74 @@
+[19:08:50] [Oracle-1] 📡 SNMP V3 Initialized at address: 0x3d4468ce0e56db5ffe7c2587dd795fe795a52c23d6153ee00ceddfd71a315e11
+[19:08:51] [Oracle-1] --- ORACLE-1 STARTED (SNMP V3 MODE) ---
+[19:08:51] [Oracle-1] Listening for SNMP V3 AuthPriv Traps on port 5005
+[19:08:51] [Oracle-1] Health-check HTTP server listening on port 6001
+[19:08:58] [Oracle-1] >>> VOTE OLT 1 -> 1
+[19:09:00] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:00] [Oracle-1]     [INFO] Already registered.
+[19:09:00] [Oracle-1] >>> VOTE OLT 2 -> 1
+[19:09:01] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:01] [Oracle-1]     [INFO] Already registered.
+[19:09:01] [Oracle-1] >>> VOTE OLT 3 -> 1
+[19:09:02] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:02] [Oracle-1]     [OK] Notarized.
+[19:09:02] [Oracle-1] >>> VOTE OLT 4 -> 1
+[19:09:03] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:03] [Oracle-1]     [OK] Notarized.
+[19:09:03] [Oracle-1] >>> VOTE OLT 5 -> 1
+[19:09:04] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:04] [Oracle-1]     [OK] Notarized.
+[19:09:04] [Oracle-1] >>> VOTE OLT 6 -> 1
+[19:09:05] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:05] [Oracle-1]     [INFO] Already registered.
+[19:09:05] [Oracle-1] >>> VOTE OLT 7 -> 1
+[19:09:06] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:06] [Oracle-1]     [INFO] Already registered.
+[19:09:06] [Oracle-1] >>> VOTE OLT 8 -> 1
+[19:09:07] [Oracle-1]     [GAS] budget=4827200 | spent=1060800
+[19:09:07] [Oracle-1]     [OK] Notarized.
+[19:09:07] [Oracle-1] >>> VOTE OLT 9 -> 1
+[19:09:08] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:08] [Oracle-1]     [OK] Notarized.
+[19:09:08] [Oracle-1] >>> VOTE OLT 10 -> 1
+[19:09:09] [Oracle-1]     [GAS] budget=4827200 | spent=1000000
+[19:09:09] [Oracle-1]     [OK] Notarized.
+[19:10:11] [Oracle-1] TIMEOUT: OLT 1
+[19:10:11] [Oracle-1] >>> VOTE OLT 1 -> 0
+[19:10:11] [Oracle-1] TIMEOUT: OLT 2
+[19:10:11] [Oracle-1] TIMEOUT: OLT 3
+[19:10:11] [Oracle-1] TIMEOUT: OLT 4
+[19:10:11] [Oracle-1] TIMEOUT: OLT 5
+[19:10:11] [Oracle-1] TIMEOUT: OLT 6
+[19:10:11] [Oracle-1] TIMEOUT: OLT 7
+[19:10:11] [Oracle-1] TIMEOUT: OLT 8
+[19:10:11] [Oracle-1] TIMEOUT: OLT 9
+[19:10:11] [Oracle-1] TIMEOUT: OLT 10
+[19:10:12] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:12] [Oracle-1]     [OK] Notarized.
+[19:10:12] [Oracle-1] >>> VOTE OLT 2 -> 0
+[19:10:13] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:13] [Oracle-1]     [OK] Notarized.
+[19:10:13] [Oracle-1] >>> VOTE OLT 3 -> 0
+[19:10:14] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:14] [Oracle-1]     [OK] Notarized.
+[19:10:14] [Oracle-1] >>> VOTE OLT 4 -> 0
+[19:10:15] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:15] [Oracle-1]     [OK] Notarized.
+[19:10:15] [Oracle-1] >>> VOTE OLT 5 -> 0
+[19:10:16] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:16] [Oracle-1]     [OK] Notarized.
+[19:10:16] [Oracle-1] >>> VOTE OLT 6 -> 0
+[19:10:17] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:17] [Oracle-1]     [OK] Notarized.
+[19:10:17] [Oracle-1] >>> VOTE OLT 7 -> 0
+[19:10:18] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:18] [Oracle-1]     [OK] Notarized.
+[19:10:18] [Oracle-1] >>> VOTE OLT 8 -> 0
+[19:10:19] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:19] [Oracle-1]     [OK] Notarized.
+[19:10:19] [Oracle-1] >>> VOTE OLT 9 -> 0
+[19:10:20] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:20] [Oracle-1]     [OK] Notarized.
+[19:10:20] [Oracle-1] >>> VOTE OLT 10 -> 0
+[19:10:21] [Oracle-1]     [GAS] budget=4827200 | spent=2846800
+[19:10:21] [Oracle-1]     [OK] Notarized.
